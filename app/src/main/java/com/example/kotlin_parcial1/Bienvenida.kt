@@ -9,15 +9,21 @@ import com.example.kotlin_parcial1.ui.theme.Kotlin_Parcial1Theme
 @Composable
 fun Bienvenida(name: String, modifier: Modifier = Modifier) {
     Text(
-        text = "Hello $name!",
+        text = "Bienvenido",
         modifier = modifier
     )
+
+
+
+
+
 }
+
 
 @Preview(showBackground = true)
 @Composable
 fun BienvenidaPreview() {
     Kotlin_Parcial1Theme {
-        Bienvenida("Android")
+        Bienvenida("")
     }
 }
