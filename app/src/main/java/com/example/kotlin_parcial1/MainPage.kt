@@ -1,4 +1,4 @@
-package com.example.kotlin_parcial1.presentacion
+package com.example.kotlin_parcial1
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
