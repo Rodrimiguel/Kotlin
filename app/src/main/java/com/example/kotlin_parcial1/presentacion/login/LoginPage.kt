@@ -27,6 +27,8 @@ fun LoginPage(
 
 ) {
     var email by remember { mutableStateOf("") }
+    var password by remember { mutableStateOf("") }
+    var errorMessage by remember { mutableStateOf("") }
 
 
     Column(
@@ -36,8 +38,8 @@ fun LoginPage(
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
-        Text(text = "CAM", fontSize = 60.sp, fontWeight = FontWeight.Bold)
-        Text(text = "Inicia con tu cuenta")
+        Text(text = "--", fontSize = 60.sp, fontWeight = FontWeight.Bold)
+        Text(text = "Iniciar sesión con tu email y contraseña")
         Spacer(modifier = Modifier.height(28.dp))
         TextField(
             value = email,
@@ -45,8 +47,16 @@ fun LoginPage(
             label = { Text("Email") }
         )
         Spacer(modifier = Modifier.height(18.dp))
-        
-        Button(onClick = { /*TODO*/ }) {
+
+        Button(
+            onClick = {
+                if (email == "pedro@pe.com.ar" && password == "abc123") {
+                    errorMessage = ""
+                } else {
+                    errorMessage = "Datos Incorrectos, por favor ingrese nuevamente sus datos"
+                }
+            }
+        ) {
             
         }
 
