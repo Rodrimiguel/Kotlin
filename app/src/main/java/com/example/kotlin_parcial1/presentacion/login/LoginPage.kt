@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
@@ -39,10 +40,15 @@ fun LoginPage(
         Text(text = "Inicia con tu cuenta")
         Spacer(modifier = Modifier.height(28.dp))
         TextField(
-            /*value = email,
+            value = email,
             onValueChange = { email = it },
-            label = { Text("Email") }*/
+            label = { Text("Email") }
         )
+        Spacer(modifier = Modifier.height(18.dp))
+        
+        Button(onClick = { /*TODO*/ }) {
+            
+        }
 
 
 
