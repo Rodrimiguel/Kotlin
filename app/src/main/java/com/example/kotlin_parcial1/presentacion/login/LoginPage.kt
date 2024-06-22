@@ -28,17 +28,17 @@ fun LoginPage(
 ) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
-    var errorMessage by remember { mutableStateOf("") }
+    var sorry_errorMessage by remember { mutableStateOf("") }
 
 
     Column(
         Modifier
             .fillMaxSize()
-            .padding(24.dp),
+            .padding(40.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
-    ){
-        Text(text = "--", fontSize = 60.sp, fontWeight = FontWeight.Bold)
+    ) {
+        Text(text = "Sign in to your account", fontSize = 20.sp, fontWeight = FontWeight.Bold)
         Text(text = "Iniciar sesión con tu email y contraseña")
         Spacer(modifier = Modifier.height(28.dp))
         TextField(
@@ -51,71 +51,18 @@ fun LoginPage(
         Button(
             onClick = {
                 if (email == "pedro@pe.com.ar" && password == "abc123") {
-                    errorMessage = ""
                 } else {
-                    errorMessage = "Datos Incorrectos, por favor ingrese nuevamente sus datos"
+                    sorry_errorMessage = "Datos Incorrectos. Por favor intenté otra vez"
                 }
             }
         ) {
-            
+            Text("LOG IN | INGRESAR")
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        if (sorry_errorMessage.isNotEmpty()) {
+            Text(sorry_errorMessage)
+        }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 @Preview(showBackground = true)
 @Composable
