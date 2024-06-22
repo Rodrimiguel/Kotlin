@@ -19,41 +19,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.kotlin_parcial1.ui.theme.Kotlin_Parcial1Theme
 
-@Composable
-fun Login(name: String, modifier: Modifier = Modifier) {
-    Column (modifier = Modifier
-        .fillMaxSize()
-        .padding(horizontal = 30.dp)) {
-        Text(text = "LOGIN",
-            modifier = modifier.align(Alignment.CenterHorizontally)
-        )
-
-        TextField(
-            value = "Ingresar E-mail", onValueChange = {}, modifier = modifier
-                .padding(top = 10.dp)
-                .fillMaxWidth(1f)
-        )
-            //Divider(modifier.padding(vertical = 30.dp), thickness = 3.dp, color = Color.Black)
-            //Spacer(modifier = modifier.height(20.dp)
-            //)
-        Button(onClick = {},
-            modifier
-                .align(Alignment.CenterVertically)
-                .padding(10.dp)
-        )
-
-
-        {
-        TextField(value = "Ingresar Contraseña", onValueChange = {}, modifier = modifier
-            .padding(top = 10.dp)
-            .fillMaxWidth(1f)
-        )
-
-
-        }
-        }
-
-    }
+// --
 
 
 
