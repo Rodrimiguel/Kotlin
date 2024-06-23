@@ -7,7 +7,7 @@ import androidx.navigation.NavHostController
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun WelcomePage(
-    navController : NavHostController,
+    navController: NavHostController,
     emailName: String
 ) {
 

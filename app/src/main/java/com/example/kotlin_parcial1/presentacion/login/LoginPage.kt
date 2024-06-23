@@ -66,7 +66,7 @@ fun LoginPage(
 
 @Preview(showBackground = true)
 @Composable
-fun LoginPacePreview (){
+fun LoginPacePreview() {
     Kotlin_Parcial1Theme {
         LoginPage()
     }

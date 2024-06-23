@@ -24,7 +24,7 @@ fun MainPage(modifier: Modifier = Modifier) {
 @Composable
 fun MainNavHost(
     modifier: Modifier = Modifier,
-    navHostController : NavHostController
+    navHostController: NavHostController
 ) {
     NavHost(
         modifier = modifier,
@@ -53,9 +53,9 @@ fun MainNavHost(
     }
 }
 
-@Preview (showBackground = true)
+@Preview(showBackground = true)
 @Composable
-fun MainPagePreview(){
+fun MainPagePreview() {
     Kotlin_Parcial1Theme {
         MainPage()
     }
