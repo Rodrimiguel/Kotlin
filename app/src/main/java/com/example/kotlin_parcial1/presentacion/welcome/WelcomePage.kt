@@ -48,7 +48,6 @@ fun WelcomePage(
     val currentRoute = navBackStackEntry?.destination?.route
     val coroutineScope = rememberCoroutineScope()
 
-
     ModalNavigationDrawer(
         drawerContent = {
             ModalDrawerSheet {
@@ -108,7 +107,7 @@ fun WelcomePage(
                     Icon(Icons.Default.Close, contentDescription = "CERRAR SESIÓN / LOT OUT")
                 }
             }
-        ) /* { innerPadding ->
+        )  { innerPadding ->
 
             Column(
                 modifier = Modifier
@@ -132,7 +131,7 @@ fun WelcomePage(
                     fontSize = 26.sp
                 )
             }
-        }*/
+        }
 
     }
 }

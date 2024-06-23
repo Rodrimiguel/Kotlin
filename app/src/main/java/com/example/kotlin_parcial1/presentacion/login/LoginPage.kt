@@ -48,8 +48,12 @@ fun LoginPage(
             onValueChange = { email = it },
             label = { Text("Email") }
         )
-        Spacer(modifier = Modifier.height(18.dp))
-
+        Spacer(modifier = Modifier.height(16.dp))
+        TextField(
+            value = password,
+            onValueChange = { password = it },
+            label = { Text("Password") }
+        )
         Button(
             onClick = {
                 if (email == "pedro@pe.com.ar" && password == "abc123") {
