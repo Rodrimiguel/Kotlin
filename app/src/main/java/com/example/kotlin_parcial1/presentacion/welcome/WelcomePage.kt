@@ -8,8 +8,11 @@ import androidx.compose.material3.NavigationDrawerItem
 import androidx.compose.material3.Text
 import androidx.compose.material3.rememberDrawerState
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.kotlin_parcial1.routes.Routes
+import com.example.kotlin_parcial1.ui.theme.Kotlin_Parcial1Theme
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -17,7 +20,8 @@ import kotlinx.coroutines.launch
 fun WelcomePage(
     navController: NavHostController,
     emailName: String
-) {val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
+) {
+    val drawerState = rememberDrawerState(initialValue = DrawerValue.Closed)
 
 
     ModalNavigationDrawer(
@@ -27,7 +31,7 @@ fun WelcomePage(
                     label = {
                         Text(text = "Cerrar Sesión | Log Out")
                     },
-                    selected = currentRoute== Routes.Page1.routes,
+                    selected = currentRoute == Routes.Page1.routes,
                     onClick = {
                         navController.navigate(Routes.Page1.routes)
                     },
@@ -36,7 +40,7 @@ fun WelcomePage(
                     label = {
                         Text(text = "Welcome | Bienvenido")
                     },
-                    selected = currentRoute== Routes.Page2.routes,
+                    selected = currentRoute == Routes.Page2.routes,
                     onClick = {
                         navController.navigate(Routes.Page2.createRoute(emailName))
                         coroutineScope.launch {
@@ -56,4 +60,17 @@ fun WelcomePage(
 
 
 
+
+
+
+
+}
+
+@Preview(showBackground = true)
+@Composable
+fun WelcomePagePreview() {
+    val navHostController = rememberNavController()
+    Kotlin_Parcial1Theme {
+        WelcomePage(navHostController, "tester@tester.com")
+    }
 }
