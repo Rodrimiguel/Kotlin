@@ -20,11 +20,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import com.example.kotlin_parcial1.routes.Routes
 import com.example.kotlin_parcial1.ui.theme.Kotlin_Parcial1Theme
 
 @Composable
 fun LoginPage(
-
+    navController : NavHostController
 ) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
@@ -51,6 +53,8 @@ fun LoginPage(
         Button(
             onClick = {
                 if (email == "pedro@pe.com.ar" && password == "abc123") {
+                    sorry_errorMessage = ""
+                    navController.navigate(Routes.Page2.createRoute(email))
                 } else {
                     sorry_errorMessage = "Datos Incorrectos. Por favor intenté otra vez"
                 }
@@ -68,6 +72,6 @@ fun LoginPage(
 @Composable
 fun LoginPacePreview() {
     Kotlin_Parcial1Theme {
-        LoginPage()
+        LoginPage(navHostController)
     }
 }
