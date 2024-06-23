@@ -125,7 +125,7 @@ fun WelcomePage(
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    text = "BIENVENIDO | WELCOME",
+                    text = "WELCOME | BIENVENIDO",
                     fontSize = 30.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier.padding(bottom = 18.dp)
