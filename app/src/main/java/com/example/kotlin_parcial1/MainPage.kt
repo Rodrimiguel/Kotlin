@@ -48,7 +48,6 @@ fun MainNavHost(
                     emailName = email
                 )
             }
-
         }
     }
 }
