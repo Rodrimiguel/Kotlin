@@ -21,6 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.kotlin_parcial1.routes.Routes
 import com.example.kotlin_parcial1.ui.theme.Kotlin_Parcial1Theme
 
@@ -75,6 +76,7 @@ fun LoginPage(
 @Preview(showBackground = true)
 @Composable
 fun LoginPacePreview() {
+    val navHostController = rememberNavController()
     Kotlin_Parcial1Theme {
         LoginPage(navHostController)
     }
