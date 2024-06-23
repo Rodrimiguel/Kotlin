@@ -9,7 +9,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-//import com.example.kotlin_parcial1.presentacion.login.LoginPage
+import com.example.kotlin_parcial1.presentacion.login.LoginPage
+import com.example.kotlin_parcial1.presentacion.welcome.WelcomePage
 import com.example.kotlin_parcial1.routes.Routes
 import com.example.kotlin_parcial1.ui.theme.Kotlin_Parcial1Theme
 
