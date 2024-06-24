@@ -27,7 +27,7 @@ import com.example.kotlin_parcial1.ui.theme.Kotlin_Parcial1Theme
 
 @Composable
 fun LoginPage(
-    navController : NavHostController
+    navController: NavHostController
 ) {
     var email by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
